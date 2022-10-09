@@ -1,11 +1,13 @@
+import { GetStaticProps } from "next";
 import Header from "../../components/Header"
 import {sanityClient, urlFor} from "../../sanity";
+import { Post } from "../../typings";
 
 interface Props {
-    post: typeof Post;
+    post: Post;
 }
 
-function Post({post}: Props){
+function Entry({post}: Props){
     console.log(post);
     return (
         <main>
@@ -26,7 +28,7 @@ function Post({post}: Props){
     ); 
 }
 
-export default Post;
+export default Entry;
 
 export const getStaticPaths = async () => {
     // finds all the posts
@@ -51,7 +53,7 @@ export const getStaticPaths = async () => {
     }
 };
 
-export const getStaticProps: GetStaticProps = async ({params} : type) => {
+export const getStaticProps: GetStaticProps = async ({params}) => {
     const query = `*[_type == "post" && slug.current == $slug][0]{
         _id,
         _createdAt,
