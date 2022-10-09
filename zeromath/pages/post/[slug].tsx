@@ -2,7 +2,7 @@ import Header from "../../components/Header"
 import {sanityClient, urlFor} from "../../sanity";
 
 interface Props {
-    post: Post;
+    post: typeof Post;
 }
 
 function Post({post}: Props){
