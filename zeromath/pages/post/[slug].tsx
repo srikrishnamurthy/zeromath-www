@@ -2,6 +2,8 @@ import { GetStaticProps } from "next";
 import Header from "../../components/Header"
 import {sanityClient, urlFor} from "../../sanity";
 import { Post } from "../../typings";
+import 'katex/dist/katex.min.css'
+import Latex from 'react-latex-next'
 
 interface Props {
     post: Post;
@@ -21,7 +23,7 @@ function Entry({post}: Props){
                     <p className="font-extralight text-sm">Blog post by {post.author.name} - Published on {new Date(post._createdAt).toLocaleDateString()}</p> 
                 </div>
                 <div className="mt-10">
-                    {post.body}
+                    <Latex>{post.body}</Latex>
                 </div>
             </article>
         </main>
