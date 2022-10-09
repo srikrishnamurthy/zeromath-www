@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    @font-face {
+        font-family: "sf-rounded-regular";
+        src: url('/fonts/subset-SFRounded-Regular.woff2');
+    }
+    @font-face {
+        font-family: "sf-rounded-heavy";
+        src: url('/fonts/subset-SFRounded-Heavy.woff2');
+    }
+    @font-face {
+        font-family: "sf-rounded-bold";
+        src: url('/fonts/subset-SFRounded-Bold.woff2');
+    }
+    @font-face {
+        font-family: "sf-rounded-medium";
+        src: url('/fonts/subset-SFRounded-Medium.woff2');
+    }
+    @font-face {
+        font-family: "sf-rounded-semibold";
+        src: url('/fonts/subset-SFRounded-Semibold.woff2');
+    }
+}

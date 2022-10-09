@@ -16,13 +16,13 @@ function Entry({post}: Props){
             <Header />
             <img className="w-full h-40 object-cover" src={urlFor(post.mainImage).url()}/>
             <article className="max-w-3xl mx-auto p-5">
-                <h1 className="text-4xl mt-10 mb-3"> {post.title}</h1>
-                <h2 className="text-xl font-light text-gray-500 mb-2">{post.description}</h2>
+                <h1 className="text-4xl mt-10 mb-3 font-rsfheavy"> {post.title}</h1>
+                <h2 className="text-xl font-light text-gray-500 mb-2 font-rsfsemibold">{post.description}</h2>
                 <div className="flex items-center space-x-2">
                     <img className="h-10 w-10 rounded-full" src={urlFor(post.author.image).url()!} alt=""/>
-                    <p className="font-extralight text-sm">Blog post by {post.author.name} - Published on {new Date(post._createdAt).toLocaleDateString()}</p> 
+                    <p className="font-extralight text-sm font-rsfregular">Blog post by {post.author.name} - Published on {new Date(post._createdAt).toLocaleDateString()}</p> 
                 </div>
-                <div className="mt-10">
+                <div className="mt-10 font-rsfregular">
                     <Latex>{post.body}</Latex>
                 </div>
             </article>

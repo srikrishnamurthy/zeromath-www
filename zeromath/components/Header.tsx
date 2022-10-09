@@ -4,7 +4,7 @@ import React from 'react'
 
 function Header() {
   return (
-    <header className="flex justify-between p-5 max-w-7xl mx-auto">
+    <header className="flex justify-between p-5 max-w-7xl mx-auto font-rsfmedium">
         <div className="flex items-center space-x-5">
             <Link href="/">
                 <img className="px-2 w-64 object-contain cursor-pointer" src="/zeromath-logo-transparent.png" alt=""/>

@@ -23,21 +23,21 @@ const Home: NextPage<Props> = ({posts}) => {
     
       <div className="flex justify-between items-center bg-black border-y border-black py-10">
         <div className="px-10 space-y-5 text-center lg:text-left text-white">
-          <h1 className="text-6xl max-w-xl md:text-4xl lg:text-6xl"> 
+          <h1 className="text-6xl max-w-xl md:text-4xl lg:text-6xl font-rsfbold"> 
             <span className="underline decoration-white decoration-4"> <span className=" text-fuchsia-500">zero</span>math </span> 
             takes you from 
             <span className=" text-fuchsia-500"> zero </span> 
             math knowledge to zero knowledge circuit 
             <span className=" text-fuchsia-500"> hero </span> 
           </h1>
-          <h2 className="text-lg"> 
+          <h2 className="text-lg font-rsfmedium"> 
             Read, learn, and practice fundamental number theory concepts to eventually build zero knowledge circuits 
           </h2>
         </div>
         <img className="hidden px-24 h-32 md:h-64 md:inline-flex lg:h-96"src="/solo-inv-pink.png" alt=""/>
       </div>
       {/* posts */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6 font-rsfmedium">
         {posts.map((post) => (
           <Link key={post._id} href={`/post/${post.slug.current}`}>
             <div className="border rounded-lg group cursor-pointer overflow-hidden  bg-black">
