@@ -1,6 +1,7 @@
 // dfinition typescript file
 export interface Post {
     _id: string;
+    title: string;
     _createdAt: string;
     author: {
         name: string;
